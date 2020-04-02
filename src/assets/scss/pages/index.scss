@@ -3,6 +3,10 @@
 
 .logo-main {
   width: 94px;
+
+  @media (max-width: $s) {
+    width: 74px;
+  }
 }
 
 .brands {

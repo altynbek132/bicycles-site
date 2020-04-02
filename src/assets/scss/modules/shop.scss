@@ -5,15 +5,24 @@
   }
 
   &__row {
-    height: 33.333vw;
+    height: 33.337vw;
+
+    @media (max-width: $m) {
+      flex-wrap: wrap;
+      height: 66.66667vw;
+    }
   }
 
   &__discover {
+    @include flex-center;
+
     padding-top: 75px;
     padding-bottom: 75px;
     background-color: $color-bg;
 
-    @include flex-center;
+    @media (max-width: $m) {
+      padding: 55px 0;
+    }
   }
 
   &__link {

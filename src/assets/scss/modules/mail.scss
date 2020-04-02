@@ -3,6 +3,10 @@
 .mail {
   margin: 110px 0;
 
+  @media (max-width: $m) {
+    margin: 70px 0;
+  }
+
   .container {
     text-align: center;
   }
@@ -10,6 +14,10 @@
   &__logo {
     margin: 0 auto;
     margin-bottom: 40px;
+
+    @media (max-width: $m) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -17,6 +25,14 @@
     font-size: 24px;
     font-style: italic;
     color: $color-text;
+
+    @media (max-width: $l) {
+      font-size: 19px;
+    }
+
+    @media (max-width: $m) {
+      margin-bottom: 25px;
+    }
   }
 
   &__form {
@@ -34,6 +50,10 @@
     font-size: 20px;
     color: $color-title;
     border: 1px solid $color-input-border;
+
+    @media (max-width: $l) {
+      font-size: 18px;
+    }
 
     &:hover {
       background-color: #e1f2f866;
@@ -58,6 +78,11 @@
 
     &:hover {
       background-color: #40aa82;
+    }
+
+    @media (max-width: $l) {
+      padding: 17px 45px;
+      font-size: 20px;
     }
   }
 }

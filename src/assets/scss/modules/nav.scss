@@ -1,6 +1,6 @@
 @import '../helpers/helpers';
 
-.header {
+.nav {
   display: flex;
   align-items: center;
 
@@ -8,8 +8,26 @@
     display: flex;
     flex-shrink: 0;
 
+    &--logo {
+      @media (max-width: $s) {
+        position: absolute;
+        top: 70px;
+      }
+    }
+
     & + & {
       margin-left: 50px;
+
+      @media (max-width: $s) {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $s) {
+      flex-basis: 50%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
     }
   }
 
@@ -35,14 +53,23 @@
       width: 100%;
       color: #ff4646;
     }
+
+    @media (max-width: $s) {
+      font-size: 25px;
+    }
   }
 
   &__dot {
     margin: 0 35px;
     pointer-events: none;
+    transform: translateY(-4px) scale(1.2);
   }
 
   &__logo-wrapper {
+    @media (max-width: $s) {
+      position: absolute;
+      z-index: 160;
+    }
   }
 
   &__logo {

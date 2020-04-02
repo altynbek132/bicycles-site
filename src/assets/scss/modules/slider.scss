@@ -83,13 +83,17 @@
 
   /* Точки (булиты) */
   .slick-dots {
+    @include flex-center;
+
     position: absolute;
     bottom: -100px;
     z-index: 1000;
     width: 100%;
     padding: 0;
 
-    @include flex-center;
+    @media (max-width: $m) {
+      bottom: -60px;
+    }
   }
 
   .slick-dots li {

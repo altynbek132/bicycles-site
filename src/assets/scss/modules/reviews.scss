@@ -47,5 +47,9 @@
     font-style: italic;
     line-height: 34px;
     color: $color-text;
+
+    @media (max-width: $l) {
+      font-size: 19px;
+    }
   }
 }

@@ -4,6 +4,10 @@
   padding: 100px 0;
   background-color: $color-back-secondary;
 
+  @media (max-width: $m) {
+    padding: 60px 0;
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -24,6 +28,7 @@
     &--dev {
       &:hover {
         text-decoration: underline;
+        text-decoration-color: $color-text;
       }
     }
   }

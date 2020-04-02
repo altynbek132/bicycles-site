@@ -5,6 +5,10 @@
   text-align: center;
   background-color: $color-back-secondary;
 
+  @media (max-width: $m) {
+    padding: 70px 0;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,10 @@
 
   &__logo-wrapper {
     margin-bottom: 34px;
+
+    @media (max-width: $m) {
+      margin-bottom: 24px;
+    }
   }
 
   &__logo {
@@ -27,6 +35,10 @@
     color: $color-title;
     text-transform: uppercase;
     letter-spacing: 3.6px;
+
+    @media (max-width: $m) {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
