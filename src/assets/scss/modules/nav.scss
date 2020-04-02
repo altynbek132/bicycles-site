@@ -4,9 +4,15 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: $xs) {
+    font-size: 20px;
+  }
+
   &__col {
     display: flex;
     flex-shrink: 0;
+
+    @include anim;
 
     &--logo {
       @media (max-width: $s) {
@@ -38,6 +44,8 @@
     color: $color-nav;
     text-transform: uppercase;
 
+    @include anim;
+
     &::after {
       position: absolute;
       bottom: -1px;
@@ -63,6 +71,8 @@
     margin: 0 35px;
     pointer-events: none;
     transform: translateY(-4px) scale(1.2);
+
+    @include anim;
   }
 
   &__logo-wrapper {

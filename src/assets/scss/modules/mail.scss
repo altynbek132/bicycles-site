@@ -7,6 +7,10 @@
     margin: 70px 0;
   }
 
+  @media (max-width: $s) {
+    margin: 50px 0;
+  }
+
   .container {
     text-align: center;
   }
@@ -17,6 +21,10 @@
 
     @media (max-width: $m) {
       margin-bottom: 30px;
+    }
+
+    @media (max-width: $s) {
+      margin-bottom: 20px;
     }
   }
 
@@ -33,12 +41,20 @@
     @media (max-width: $m) {
       margin-bottom: 25px;
     }
+
+    @media (max-width: $s) {
+      margin-bottom: 35px;
+    }
   }
 
   &__form {
     display: flex;
     align-items: stretch;
     justify-content: center;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -53,6 +69,14 @@
 
     @media (max-width: $l) {
       font-size: 18px;
+    }
+
+    @media (max-width: $xs) {
+      flex-basis: auto;
+      padding: 15px;
+      margin-right: 0;
+      margin-bottom: 15px;
+      font-size: 16px;
     }
 
     &:hover {
@@ -83,6 +107,10 @@
     @media (max-width: $l) {
       padding: 17px 45px;
       font-size: 20px;
+    }
+
+    @media (max-width: $s) {
+      padding: 11px 45px;
     }
   }
 }

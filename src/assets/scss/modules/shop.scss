@@ -11,6 +11,10 @@
       flex-wrap: wrap;
       height: 66.66667vw;
     }
+
+    @media (max-width: $s) {
+      height: 206.66667vw;
+    }
   }
 
   &__discover {
@@ -23,6 +27,12 @@
     @media (max-width: $m) {
       padding: 55px 0;
     }
+
+    @media (max-width: $s) {
+      padding: 45px 0;
+    }
+
+    @media (max-width: $xs) { padding: 35px 0; }
   }
 
   &__link {
@@ -34,6 +44,11 @@
     letter-spacing: 2.8px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: 0.2s;
+
+    @media (max-width: $xs) {
+      padding: 15px 25px;
+      font-size: 15px;
+    }
 
     &:hover {
       background-color: #394249;

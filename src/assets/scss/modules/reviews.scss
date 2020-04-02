@@ -5,6 +5,16 @@
   padding-bottom: 180px;
   background-color: $color-back-secondary;
 
+  @media (max-width: $s) {
+    padding-top: 65px;
+    padding-bottom: 110px;
+  }
+
+  @media (max-width: $xs) {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
   &__item {
     text-align: center;
 
@@ -21,6 +31,12 @@
     margin-bottom: 37px;
     text-align: center;
 
+    @media (max-width: $xs) {
+      margin-bottom: 20px;
+    }
+
+
+
     img {
       width: 32px;
       height: auto;
@@ -35,10 +51,18 @@
     color: $color-title;
     letter-spacing: 1.8px;
 
+    @media (max-width: $xs) {
+      margin-bottom: 17px;
+    }
+
     span {
       font-weight: 300;
       color: $color-text;
       letter-spacing: 1.8px;
+    }
+
+    @media (max-width: $s) {
+      font-size: 17px;
     }
   }
 
@@ -50,6 +74,14 @@
 
     @media (max-width: $l) {
       font-size: 19px;
+    }
+
+    @media (max-width: $s) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
     }
   }
 }

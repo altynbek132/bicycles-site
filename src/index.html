@@ -9,31 +9,39 @@
   </head>
   <body>
     <section class="intro">
-      <div class="intro__burger"><span></span></div>
+
+      <div class="intro__header">
+        <a class="intro__extra-logo" href="#">
+          <img src="assets/images/logo-main.png" alt="" />
+        </a>
+        <div class="intro__burger"><span></span></div>
+        
+        <nav class="intro__nav nav">
+          <div class="nav__col">
+            <a class="nav__item" data-scroll href="#about">about us</a>
+            <div class="nav__dot">.</div>
+            <a class="nav__item" data-scroll href="#work">work</a>
+          </div>
+          <div class="nav__col nav__col--logo">
+            <a class="nav__logo-wrapper" href="#">
+              <img class="nav__logo logo-main" src="assets/images/logo-main.png" alt="" />
+            </a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__item" data-scroll href="#shop">shop</a>
+            <div class="nav__dot">.</div>
+            <a class="nav__item" data-scroll href="#contact">contact</a>
+          </div>
+        </nav>
+      </div>
       
-      <nav class="intro__nav nav">
-        <div class="nav__col">
-          <a class="nav__item" href="#">about us</a>
-          <div class="nav__dot">.</div>
-          <a class="nav__item" href="#">work</a>
-        </div>
-        <div class="nav__col nav__col--logo">
-          <a class="nav__logo-wrapper" href="#">
-            <img class="nav__logo logo-main" src="assets/images/logo-main.png" alt="" />
-          </a>
-        </div>
-        <div class="nav__col">
-          <a class="nav__item" href="#">shop</a>
-          <div class="nav__dot">.</div>
-          <a class="nav__item" href="#">contact</a>
-        </div>
-      </nav>
+      
       <div class="intro__bg ibg">
         <img src="assets/images/bg-main.jpg" alt="" />
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__wrapper">
           <div class="about__logo-wrapper">
@@ -53,7 +61,7 @@
       </div>
     </section>
 
-    <section class="brands">
+    <section class="brands" id="work">
       <div class="brands__row row">
         <div class="row__col row__col--big">
           <div class="row__logo">
@@ -201,7 +209,7 @@
       </div>
     </section>
 
-    <section class="shop">
+    <section class="shop" id="shop">
       <div class="shop__images">
         <div class="shop__row row">
           <div class="row__col row__col--little row__col--vertical">
@@ -302,7 +310,7 @@
       </div>
     </section>
 
-    <section class="mail">
+    <section class="mail" id="contact">
       <div class="container">
         <div class="mail__logo ">
           <img class="mail__logo logo-main" src="assets/images/logo-main.png" alt="" />

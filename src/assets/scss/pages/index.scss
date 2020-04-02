@@ -4,6 +4,8 @@
 .logo-main {
   width: 94px;
 
+  @include anim;
+
   @media (max-width: $s) {
     width: 74px;
   }
