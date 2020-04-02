@@ -1,0 +1,50 @@
+@import '../helpers/helpers';
+
+.header {
+  display: flex;
+  align-items: center;
+
+  &__col {
+    display: flex;
+    flex-shrink: 0;
+
+    & + & {
+      margin-left: 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-nav;
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      content: '';
+      background-color: #2b2a2c;
+      transition: 0.2s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      color: #ff4646;
+    }
+  }
+
+  &__dot {
+    margin: 0 35px;
+    pointer-events: none;
+  }
+
+  &__logo-wrapper {
+  }
+
+  &__logo {
+  }
+}

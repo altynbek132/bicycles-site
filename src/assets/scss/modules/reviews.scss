@@ -1,0 +1,51 @@
+@import '../helpers/helpers';
+
+.reviews {
+  padding-top: 125px;
+  padding-bottom: 180px;
+  background-color: $color-back-secondary;
+
+  &__item {
+    text-align: center;
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  &__slider.slick-initialized &__item {
+    display: block;
+  }
+
+  &__logo {
+    margin-bottom: 37px;
+    text-align: center;
+
+    img {
+      width: 32px;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-title;
+    letter-spacing: 1.8px;
+
+    span {
+      font-weight: 300;
+      color: $color-text;
+      letter-spacing: 1.8px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-style: italic;
+    line-height: 34px;
+    color: $color-text;
+  }
+}

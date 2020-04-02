@@ -1,0 +1,63 @@
+@import '../helpers/helpers';
+
+.mail {
+  margin: 110px 0;
+
+  .container {
+    text-align: center;
+  }
+
+  &__logo {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-style: italic;
+    color: $color-text;
+  }
+
+  &__form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  &__input {
+    @include anim;
+
+    flex-basis: 400px;
+    padding: 0 28px;
+    margin-right: 8px;
+    font-size: 20px;
+    color: $color-title;
+    border: 1px solid $color-input-border;
+
+    &:hover {
+      background-color: #e1f2f866;
+    }
+
+    &::placeholder {
+      // font-size: 20px;
+      font-style: italic;
+      color: $color-input;
+    }
+  }
+
+  &__btn {
+    @include anim;
+
+    padding: 26px 45px;
+    font-size: 24px;
+    font-weight: 300;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: #40aa82;
+    }
+  }
+}

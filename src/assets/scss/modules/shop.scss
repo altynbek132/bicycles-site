@@ -1,0 +1,33 @@
+@import '../helpers/helpers';
+
+.shop {
+  &__images {
+  }
+
+  &__row {
+    height: 33.333vw;
+  }
+
+  &__discover {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: $color-bg;
+
+    @include flex-center;
+  }
+
+  &__link {
+    padding: 20px 55px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #394249;
+    }
+  }
+}

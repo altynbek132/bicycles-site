@@ -1,0 +1,17 @@
+@import '../helpers/helpers';
+
+.intro {
+  position: relative;
+
+  &__header {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    z-index: 50;
+    transform: translateX(-50%);
+  }
+
+  &__bg {
+    height: 100vh;
+  }
+}
