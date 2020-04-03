@@ -96,7 +96,7 @@ gulp.task('svgSprite', function() {
         },
       }),
     )
-    .pipe(gulp.dest(dist_assets_folder + 'images'))
+    .pipe(gulp.dest(dist_assets_folder + 'images'));
 });
 
 gulp.task('clear', () => del([dist_folder]));
@@ -232,6 +232,30 @@ gulp.task('jsBuild', () => {
     .pipe(gulp.dest(dist_assets_folder + 'js'));
 });
 
+gulp.task('imagesBuild', () => {
+  return gulp
+    .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
+      since: gulp.lastRun('images'),
+    })
+    .pipe(plumber())
+    .pipe(
+      imagemin([
+        // do not work
+        // imagemin.gifsicle({ interlaced: true }),
+        imagemin.mozjpeg({ quality: 75, progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        // imagemin.svgo({
+        //     plugins: [
+        //         {removeViewBox: true},
+        //         {cleanupIDs: false}
+        //     ]
+        // })
+      ]),
+    )
+    .pipe(gulp.dest(dist_assets_folder + 'images'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('images', () => {
   return gulp
     .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
@@ -287,7 +311,7 @@ gulp.task(
     // 'less',
     // 'stylus',
     'jsBuild',
-    'images',
+    'imagesBuild',
     'vendor',
     'svgMin',
   ),
