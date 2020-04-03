@@ -1,11 +1,5 @@
-# Sample workspace
-### Enabled:
+# Source code of portfolio site
+### Builded via:
 - gulp
 - scss
-- stylelint
-
-### Disabled:
-- sprites
-- less
-- stylus
-- pug
+- BEM
